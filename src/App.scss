@@ -1,41 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --clr-primary: hsl(26, 100%, 55%)
+  --clr-primary-pale:hsl(25, 100%, 94%)
+  --clr-neutral-very-dark: hsl(220, 13%, 13%)
+  --clr-neutral-dak-grayish: hsl(219, 9%, 45%)
+  --clr-neutral-grayish: hsl(220, 14%, 75%)
+  --clr-neutral-light-grayish: hsl(223, 64%, 98%)
+  --clr-neutral-white: hsl(0, 0%, 100%)
+  --clr-neutral-black: hsl(0, 0%, 0%)
+
+  --ff-primary: 'Bebas Neue', cursive;
+  --fw-regular: 400;
+  --ff-bold: 700;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  max-width: 1440px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, 
+body {
+height: 100%;
+}
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
   }
-  to {
-    transform: rotate(360deg);
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
