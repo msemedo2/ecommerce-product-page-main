@@ -1,4 +1,4 @@
-import './product-image.scss';
+import './product-image.styles.scss';
 
 const ProductImage = ({ thumbnails, handleHover, image }) => {
 	return (

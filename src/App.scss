@@ -1,13 +1,13 @@
 $clr-primary: hsl(26, 100%, 55%);
 $clr-primary-pale: hsl(25, 100%, 94%);
 $clr-neutral-very-dark: hsl(220, 13%, 13%);
-$clr-neutral-dak-grayish: hsl(219, 9%, 45%);
+$clr-neutral-grayish: hsl(219, 9%, 45%);
 $clr-neutral-grayish: hsl(220, 14%, 75%);
 $clr-neutral-light-grayish: hsl(223, 64%, 98%);
 $clr-neutral-white: hsl(0, 0%, 100%);
 $clr-neutral-black: hsl(0, 0%, 0%);
 
-$ff-primary: 'Bebas Neue', cursive;
+$ff-primary: 'Kumbh Sans', sans-serif;
 $fw-regular: 400;
 $ff-bold: 700;
 
@@ -35,6 +35,7 @@ html:focus-within {
 html,
 body {
 	height: 100%;
+	font-family: $ff-primary;
 }
 
 body {
@@ -71,4 +72,13 @@ svg {
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
 	}
+}
+
+.page-container {
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
 }

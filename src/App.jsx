@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import ProductImage from './components/product-image/product-image.component';
+import ProductInfo from './components/product-info/product-info.component';
 import './App.scss';
 
 const App = () => {
@@ -30,13 +31,18 @@ const App = () => {
 	};
 
 	return (
-		<div className="app-container">
-			<ProductImage
-				thumbnails={thumbnails}
-				handleHover={handleHover}
-				image={image}
-			/>
-		</div>
+		<>
+			<div className="page-container">
+				<div className="app-container">
+					<ProductImage
+						thumbnails={thumbnails}
+						handleHover={handleHover}
+						image={image}
+					/>
+				</div>
+				<ProductInfo />
+			</div>
+		</>
 	);
 };
 
