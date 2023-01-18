@@ -1,6 +1,23 @@
+import { useState } from 'react';
+
 import './product-info.styles.scss';
 
 const ProductInfo = () => {
+	const [amount, setAmount] = useState(0);
+	const [totalAmount, setTotalAmount] = useState(125);
+
+	const addOne = () => {
+		setAmount(amount + 1);
+		setTotalAmount(totalAmount + 125);
+	};
+	const subtractOne = () => {
+		if (amount === 0) {
+			return;
+		}
+		setAmount(amount - 1);
+		setTotalAmount(totalAmount - 125);
+	};
+
 	return (
 		<div className="product-info-section">
 			<p className="title">SNEAKER COMPANY</p>
@@ -11,15 +28,19 @@ const ProductInfo = () => {
 				weather can offer.
 			</p>
 			<div className="price-container">
-				<p className="price">$125.00</p>
+				<p className="price">{`${totalAmount}.00$`}</p>
 				<p className="discount">50%</p>
 			</div>
 			<p className="original-price">$250.00</p>
 			<div className="quantity-add-container">
 				<div className="quantity-container">
-					<button class="button">-</button>
-					<p className="amount">0</p>
-					<button class="button">+</button>
+					<button onClick={subtractOne} className="button">
+						-
+					</button>
+					<p className="amount">{amount}</p>
+					<button onClick={addOne} className="button">
+						+
+					</button>
 				</div>
 				<button className="add-to-cart">
 					<img className="cart" src="../public/icon-cart.svg" alt="cart" />
